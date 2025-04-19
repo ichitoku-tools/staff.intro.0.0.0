@@ -9,36 +9,37 @@
       font-family: sans-serif;
       background-color: #f9f9f9;
       text-align: center;
-      padding: 2rem;
+      padding: 1.5rem;
+      margin: 0;
     }
     h1 {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       margin-bottom: 1rem;
     }
     .logo {
       width: 100px;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
       max-width: 400px;
       margin: 0 auto;
     }
     .staff {
       background-color: #fff;
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 1rem;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
       transition: transform 0.2s;
     }
     .staff:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
     .staff img {
-      width: 80px;
-      height: 80px;
+      width: 90px;
+      height: 90px;
       object-fit: cover;
       border-radius: 10px;
     }
@@ -49,6 +50,22 @@
     a {
       text-decoration: none;
       color: inherit;
+    }
+    .footer-button {
+      margin-top: 2.5rem;
+    }
+    .footer-button img {
+      width: 160px;
+    }
+    @media screen and (max-width: 480px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+      }
+      .staff img {
+        width: 80px;
+        height: 80px;
+      }
     }
   </style>
 </head>
@@ -72,6 +89,12 @@
     <a href="makoto.html" class="staff">
       <img src="./makoto.png" alt="まこと" />
       <h2>まこと</h2>
+    </a>
+  </div>
+
+  <div class="footer-button">
+    <a href="https://momitoku.main.jp/" target="_blank">
+      <img src="./buttan.hp.svg" alt="公式ホームページへ" />
     </a>
   </div>
 </body>
