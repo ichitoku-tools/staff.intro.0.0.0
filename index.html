@@ -7,34 +7,48 @@
   <style>
     body {
       font-family: sans-serif;
+      background-color: #f9f9f9;
       text-align: center;
       padding: 2rem;
-      background-color: #f8f8f8;
     }
     h1 {
       font-size: 2rem;
       margin-bottom: 1rem;
     }
     .logo {
-      width: 160px;
-      margin-bottom: 1.5rem;
+      width: 150px;
+      margin-bottom: 2rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1.5rem;
+      max-width: 500px;
+      margin: 0 auto;
     }
     .staff {
-      background: white;
-      margin: 1rem auto;
+      background-color: #fff;
+      border-radius: 10px;
       padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      width: 300px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s;
+    }
+    .staff:hover {
+      transform: scale(1.05);
     }
     .staff img {
       width: 100px;
       height: 100px;
-      border-radius: 50%;
+      object-fit: cover;
+      border-radius: 10px;
     }
     .staff h2 {
       margin-top: 0.5rem;
-      font-size: 1.2rem;
+      font-size: 1rem;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
     }
   </style>
 </head>
@@ -42,24 +56,23 @@
   <h1>もみ徳 姪浜店｜スタッフ紹介</h1>
   <img src="./momitoku.logo.png" alt="もみ徳ロゴ" class="logo" />
 
-  <div class="staff">
-    <img src="./yui.png" alt="ゆい" />
-    <h2>ゆい</h2>
-  </div>
-
-  <div class="staff">
-    <img src="./akane.png" alt="あかね" />
-    <h2>あかね</h2>
-  </div>
-
-  <div class="staff">
-    <img src="./tarou.png" alt="たろう" />
-    <h2>たろう</h2>
-  </div>
-
-  <div class="staff">
-    <img src="./makoto.png" alt="まこと" />
-    <h2>まこと</h2>
+  <div class="grid">
+    <a href="yui.html" class="staff">
+      <img src="./yui.png" alt="ゆい" />
+      <h2>ゆい</h2>
+    </a>
+    <a href="akane.html" class="staff">
+      <img src="./akane.png" alt="あかね" />
+      <h2>あかね</h2>
+    </a>
+    <a href="tarou.html" class="staff">
+      <img src="./tarou.png" alt="たろう" />
+      <h2>たろう</h2>
+    </a>
+    <a href="makoto.html" class="staff">
+      <img src="./makoto.png" alt="まこと" />
+      <h2>まこと</h2>
+    </a>
   </div>
 </body>
 </html>
