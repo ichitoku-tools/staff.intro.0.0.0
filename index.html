@@ -6,15 +6,25 @@
   <title>もみ徳 姪浜店｜スタッフ紹介</title>
   <style>
     body {
-      font-family: sans-serif;
-      background-color: #f9f9f9;
-      text-align: center;
-      padding: 1.5rem;
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+      background: linear-gradient(145deg, #f0f0f0, #e8f5e9);
       margin: 0;
+      padding: 0;
     }
+
+    .wrapper {
+      background-color: #ffffffee;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    }
+
     h1 {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       margin-bottom: 1rem;
+      color: #333;
     }
 
     .info-box {
@@ -23,8 +33,6 @@
       padding: 1rem;
       margin-bottom: 2rem;
       border-radius: 8px;
-      max-width: 420px;
-      margin-inline: auto;
       font-size: 0.95rem;
       color: #333;
     }
@@ -33,8 +41,6 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
-      max-width: 400px;
-      margin: 0 auto;
     }
 
     .staff {
@@ -68,11 +74,12 @@
 
     .footer-button {
       margin-top: 3rem;
+      text-align: center;
     }
 
     .footer-button img {
       width: 400px;
-      max-width: 90vw;
+      max-width: 90%;
       filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.1));
     }
 
@@ -90,37 +97,39 @@
   </style>
 </head>
 <body>
-  <h1>もみ徳 姪浜店｜スタッフ紹介</h1>
+  <div class="wrapper">
+    <h1>もみ徳 姪浜店｜スタッフ紹介</h1>
 
-  <div class="info-box">
-    <span style="font-size: 1.2rem;">💡</span>
-    「次はこの人にお願いしてみようかな？」という<br>
-    指名やご予約の参考にご活用ください。
-  </div>
+    <div class="info-box">
+      <span style="font-size: 1.2rem;">💡</span>
+      「次はこの人にお願いしてみようかな？」という<br>
+      指名やご予約の参考にご活用ください。
+    </div>
 
-  <div class="grid">
-    <a href="yui.html" class="staff">
-      <img src="./yui.png" alt="ゆい" />
-      <h2>ゆい</h2>
-    </a>
-    <a href="akane.html" class="staff">
-      <img src="./akane.png" alt="あかね" />
-      <h2>あかね</h2>
-    </a>
-    <a href="tarou.html" class="staff">
-      <img src="./tarou.png" alt="たろう" />
-      <h2>たろう</h2>
-    </a>
-    <a href="makoto.html" class="staff">
-      <img src="./makoto.png" alt="まこと" />
-      <h2>まこと</h2>
-    </a>
-  </div>
+    <div class="grid">
+      <a href="yui.html" class="staff">
+        <img src="./yui.png" alt="ゆい" />
+        <h2>ゆい</h2>
+      </a>
+      <a href="akane.html" class="staff">
+        <img src="./akane.png" alt="あかね" />
+        <h2>あかね</h2>
+      </a>
+      <a href="tarou.html" class="staff">
+        <img src="./tarou.png" alt="たろう" />
+        <h2>たろう</h2>
+      </a>
+      <a href="makoto.html" class="staff">
+        <img src="./makoto.png" alt="まこと" />
+        <h2>まこと</h2>
+      </a>
+    </div>
 
-  <div class="footer-button">
-    <a href="https://momitoku.main.jp/" target="_blank">
-      <img src="./buttan.hp.svg" alt="公式ホームページへ" />
-    </a>
+    <div class="footer-button">
+      <a href="https://momitoku.main.jp/" target="_blank">
+        <img src="./buttan.hp.svg" alt="公式ホームページへ" />
+      </a>
+    </div>
   </div>
 </body>
 </html>
