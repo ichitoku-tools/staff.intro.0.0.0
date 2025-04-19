@@ -55,8 +55,14 @@
       margin-top: 2.5rem;
     }
     .footer-button img {
-      width: 160px;
+      width: 200px; /* ボタン大きめに */
+      filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1));
     }
+    /* SVG内部の余白・アイコンなどが気になる場合の対策 */
+    .footer-button svg text {
+      display: none;
+    }
+
     @media screen and (max-width: 480px) {
       .grid {
         grid-template-columns: 1fr 1fr;
