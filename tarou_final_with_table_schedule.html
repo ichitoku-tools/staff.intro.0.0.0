@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>たろう｜もみ徳スタッフ紹介</title>
+  <style>
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+      background-color: #fff7eb;
+      margin: 0;
+      padding: 2rem;
+      color: #333;
+    }
+
+    .profile {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      border: 1px solid #f4a261;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .photo {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .photo img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 2px solid #f4a261;
+    }
+
+    .info {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .info p {
+      margin: 0.3rem 0;
+    }
+
+    .intro-box {
+      background-color: #fffdf7;
+      border: 1px solid #f4a261;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    .comment-box {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .comment-box button {
+      padding: 0.5rem 1rem;
+      background-color: #f4a261;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .comment-box .result {
+      margin-top: 1rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .schedule {
+      background: #fffdf7;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #f4a261;
+      margin-top: 2rem;
+    }
+
+    .schedule h3 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .schedule table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    .schedule th, .schedule td {
+      border: 1px solid #f4a261;
+      padding: 0.5rem;
+      text-align: center;
+    }
+
+    .schedule th {
+      background-color: #fff3e6;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile">
+    <h1>たろう</h1>
+    <div class="photo">
+      <img src="./tarou.png" alt="たろうの写真" />
+    </div>
+    <div class="info">
+      <p><strong>性別：</strong>男性</p>
+      <p><strong>出勤店舗：</strong><br>
+        月・水・金：<a href="https://momitoku.main.jp/meinohama/index.html" target="_blank">もみ徳 姪浜店</a><br>
+        火・木・土：<a href="https://momitoku.main.jp/tenjinwest.html" target="_blank">もみ徳 天神西店</a>
+      </p>
+
+      <div class="intro-box">
+        <p>
+          お身体の状態に合わせて、的確なアプローチを心がけています。<br>
+          丁寧な接客と、動きやすさを意識した施術でサポートいたします。
+        </p>
+      </div>
+    </div>
+
+    <div class="comment-box">
+      <button onclick="generateComment()">スタッフからの一言を見る</button>
+      <div class="result" id="comment-result">▼ ボタンを押してね ▼</div>
+    </div>
+
+    <div class="schedule">
+      <h3>今週の出勤予定（週休2日）</h3>
+      <table>
+        <tr><th>曜日</th><th>出勤店舗</th><th>出勤時間</th></tr>
+        <tr><td>月曜</td><td><a href="https://momitoku.main.jp/meinohama/index.html" target="_blank">姪浜店</a></td><td>12:00〜21:00</td></tr>
+        <tr><td>火曜</td><td><a href="https://momitoku.main.jp/tenjinwest.html" target="_blank">天神西店</a></td><td>10:00〜19:00</td></tr>
+        <tr><td>水曜</td><td><a href="https://momitoku.main.jp/meinohama/index.html" target="_blank">姪浜店</a></td><td>12:30〜21:30</td></tr>
+        <tr><td>木曜</td><td><a href="https://momitoku.main.jp/tenjinwest.html" target="_blank">天神西店</a></td><td>10:30〜19:30</td></tr>
+        <tr><td>金曜</td><td><a href="https://momitoku.main.jp/meinohama/index.html" target="_blank">姪浜店</a></td><td>12:00〜21:00</td></tr>
+        <tr><td>土曜</td><td><a href="https://momitoku.main.jp/tenjinwest.html" target="_blank">天神西店</a></td><td>10:00〜19:00</td></tr>
+        <tr><td>日曜</td><td>お休み</td><td>―</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    const comments = [
+      "しっかりとコリにアプローチします！",
+      "スッキリしたい方はぜひご相談ください！",
+      "丁寧な接客と確かな技術でお迎えします。",
+      "動きやすさを意識した施術が得意です。",
+      "あなたにぴったりの力加減でご案内します！"
+    ];
+
+    function generateComment() {
+      const result = document.getElementById('comment-result');
+      const random = Math.floor(Math.random() * comments.length);
+      result.textContent = comments[random];
+    }
+  </script>
+</body>
+</html>
