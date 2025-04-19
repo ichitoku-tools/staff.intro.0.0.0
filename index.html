@@ -29,15 +29,15 @@
       text-align: center;
     }
 
-    .info-box {
-      border: 1px solid #f4a261;
-      background-color: #fff3e6;
-      padding: 1rem;
-      margin-bottom: 2rem;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      color: #333;
+    .top-image {
       text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .top-image img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
     }
 
     .grid {
@@ -92,6 +92,11 @@
         grid-template-columns: 1fr 1fr;
         gap: 0.8rem;
       }
+
+      .staff img {
+        width: 100%;
+        height: auto;
+      }
     }
   </style>
 </head>
@@ -99,10 +104,8 @@
   <div class="wrapper">
     <h1>もみ徳姪浜店スタッフ名簿</h1>
 
-    <div class="info-box">
-      <span style="font-size: 1.2rem;">💡</span><br>
-      「次はこの人にお願いしてみようかな？」という<br>
-      指名やご予約の参考にご活用ください。
+    <div class="top-image">
+      <img src="./top.txt.svg" alt="スタッフ紹介の説明" />
     </div>
 
     <div class="grid">
