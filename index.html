@@ -7,14 +7,14 @@
   <style>
     body {
       font-family: "Hiragino Kaku Gothic ProN", sans-serif;
-      background-color: #fff7eb; /* ほんのりオレンジ */
+      background-color: #fff7eb;
       margin: 0;
       padding: 0;
     }
 
     .wrapper {
       background-color: #fff;
-      border: 1px solid #f4a261; /* 細いオレンジ枠 */
+      border: 1px solid #f4a261;
       border-radius: 12px;
       max-width: 640px;
       margin: 2rem auto;
@@ -88,21 +88,19 @@
     }
 
     @media screen and (max-width: 480px) {
+      h1 {
+        font-size: 1.4rem;
+      }
       .grid {
         grid-template-columns: 1fr 1fr;
         gap: 0.8rem;
-      }
-
-      .staff img {
-        width: 100%;
-        height: auto;
       }
     }
   </style>
 </head>
 <body>
   <div class="wrapper">
-    <h1>もみ徳姪浜店スタッフ名簿</h1>
+    <h1>もみ徳姪浜店<br>スタッフ名簿</h1>
 
     <div class="top-image">
       <img src="./top.txt.svg" alt="スタッフ紹介の説明" />
