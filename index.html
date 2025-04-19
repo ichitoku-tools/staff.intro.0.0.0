@@ -14,7 +14,19 @@
     }
     h1 {
       font-size: 1.6rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .info-box {
+      border: 1px solid #ddd;
+      background-color: #fffbea;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      max-width: 420px;
+      margin-inline: auto;
+      font-size: 0.95rem;
+      color: #333;
     }
 
     .grid {
@@ -24,6 +36,7 @@
       max-width: 400px;
       margin: 0 auto;
     }
+
     .staff {
       background-color: #fff;
       border-radius: 12px;
@@ -31,29 +44,36 @@
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
       transition: transform 0.2s;
     }
+
     .staff:hover {
       transform: scale(1.03);
     }
+
     .staff img {
       width: 90px;
       height: 90px;
       object-fit: cover;
       border-radius: 10px;
     }
+
     .staff h2 {
       margin-top: 0.5rem;
       font-size: 1rem;
     }
+
     a {
       text-decoration: none;
       color: inherit;
     }
+
     .footer-button {
-      margin-top: 2.5rem;
+      margin-top: 3rem;
     }
+
     .footer-button img {
-      width: 200px;
-      filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1));
+      width: 400px;
+      max-width: 90vw;
+      filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.1));
     }
 
     @media screen and (max-width: 480px) {
@@ -61,6 +81,7 @@
         grid-template-columns: 1fr 1fr;
         gap: 0.8rem;
       }
+
       .staff img {
         width: 80px;
         height: 80px;
@@ -70,6 +91,12 @@
 </head>
 <body>
   <h1>もみ徳 姪浜店｜スタッフ紹介</h1>
+
+  <div class="info-box">
+    <span style="font-size: 1.2rem;">💡</span>
+    「次はこの人にお願いしてみようかな？」という<br>
+    指名やご予約の参考にご活用ください。
+  </div>
 
   <div class="grid">
     <a href="yui.html" class="staff">
